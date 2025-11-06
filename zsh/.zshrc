@@ -119,8 +119,8 @@ bindkey -M vicmd 'j' history-substring-search-down
 VI_MODE_SET_CURSOR=true
 
 # zsh-autocomplete settings
-bindkey              '^I' menu-select
-bindkey "$terminfo[kcbt]" menu-select
+# bindkey              '^I' menu-select
+# bindkey "$terminfo[kcbt]" menu-select
 
 # Connect to Bitwarden SSH Agent on Windows
 export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
@@ -134,3 +134,7 @@ if ! ssh-add -l &>/dev/null; then
     # Start the socat bridge in the background
     (setsid socat UNIX-LISTEN:"$SSH_AUTH_SOCK",fork EXEC:'/mnt/c/Users/vinicius_borges/AppData/Local/Microsoft/WinGet/Packages/albertony.npiperelay_Microsoft.Winget.Source_8wekyb3d8bbwe/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent',nofork &) >/dev/null 2>&1
 fi
+
+# fzf shell integration
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
