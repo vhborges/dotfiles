@@ -75,6 +75,7 @@ plugins=(git history-substring-search vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Custom plugins
+source ~/.oh-my-zsh/custom/plugins/catppuccin_macchiato-zsh-syntax-highlighting/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -138,3 +139,6 @@ fi
 # fzf shell integration
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Starship
+eval "$(starship init zsh)"
