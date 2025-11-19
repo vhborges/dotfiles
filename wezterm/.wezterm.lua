@@ -11,8 +11,6 @@ end)
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- This is where you actually apply your config choices.
-
 -- Start in WSL
 config.default_domain = "WSL:archlinux"
 
@@ -20,8 +18,6 @@ config.default_domain = "WSL:archlinux"
 config.default_prog = { "pwsh.exe", "-NoLogo" }
 
 -- Window
-config.initial_cols = 120
-config.initial_rows = 35
 config.use_fancy_tab_bar = false
 config.window_padding = {
 	left = 0,
@@ -32,16 +28,9 @@ config.window_padding = {
 
 -- Fonts
 config.font_size = 12
-config.window_frame = {
-	font_size = 16.0,
-}
---config.font = wezterm.font 'JetBrainsMono Nerd Font'
 
 -- Appearance
 config.color_scheme = "Catppuccin Macchiato"
---config.window_decorations = "RESIZE"
---config.hide_tab_bar_if_only_one_tab = true
---config.window_close_confirmation = "NeverPrompt"
 
 -- Leader key
 config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 2000 }
@@ -122,7 +111,7 @@ config.keys = {
 
 	-- Create new tab
 	{
-		key = "c",
+		key = "t",
 		mods = "LEADER",
 		action = action.SpawnTab("DefaultDomain"),
 	},
