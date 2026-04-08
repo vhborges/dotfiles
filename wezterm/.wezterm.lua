@@ -14,8 +14,11 @@ local config = wezterm.config_builder()
 -- Start in WSL
 config.default_domain = "WSL:archlinux"
 
---- Set Pwsh as the default on Windows
+-- Set Pwsh as the default on Windows
 config.default_prog = { "pwsh.exe", "-NoLogo" }
+
+-- Do not ask for confirmation on window close
+config.window_close_confirmation = 'NeverPrompt'
 
 -- Window
 config.use_fancy_tab_bar = false
