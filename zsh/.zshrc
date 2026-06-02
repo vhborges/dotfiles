@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Prevent PATH duplications
+typeset -U path PATH
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -142,3 +145,6 @@ source <(fzf --zsh)
 
 # Starship
 eval "$(starship init zsh)"
+
+path+=(~/.local/bin)
+
