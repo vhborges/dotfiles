@@ -162,5 +162,9 @@ for i = 1, 9 do
 	})
 end
 
+-- Miscellaneous
+-- How many lines of scrollback you want to retain per tab
+config.scrollback_lines = 10000
+
 -- Finally, return the configuration to wezterm:
 return config
