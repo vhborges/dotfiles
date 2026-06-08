@@ -50,6 +50,7 @@ nmap <leader>l <Action>(ReformatCode)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>ge <Action>(ShowErrorDescription)
 
 " Grupo de refatorações sob <leader>r
 nmap <leader>re <Action>(ExtractMethod)
@@ -64,7 +65,9 @@ nmap [e <Action>(GotoPreviousError)
 
 nmap <leader>t <Action>(Switcher)
 
-nmap mr <Action>(ExternalSystem.ProjectRefreshAction)
+" Maven actions
+nmap <leader>mr <Action>(ExternalSystem.ProjectRefreshAction)
+nmap <leader>vr <Action>(IdeaVim.ReloadVimRc.reload)
 
 nmap <leader>p <Action>(ActivateProjectToolWindow)
 
