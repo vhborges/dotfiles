@@ -67,6 +67,9 @@ nmap <leader>t <Action>(Switcher)
 
 " Maven actions
 nmap <leader>mr <Action>(ExternalSystem.ProjectRefreshAction)
+nmap <leader>mi <Action>(Maven.RunBuild)
+
+" IdeaVim actions
 nmap <leader>vr <Action>(IdeaVim.ReloadVimRc.reload)
 
 nmap <leader>p <Action>(ActivateProjectToolWindow)
